@@ -11,6 +11,15 @@ app.get('/', (request, response) => {
     response.sendFile(path.join(FRONT_PATH, 'index.html'));
 });
 
+app.get('/actores', (request, response) => {
+    db.all("select * from actor", [], (err, rows) => {
+        if (err) 
+            response.status(500).json({ error: err.message });
+        else 
+            response.rows.json();
+    });
+});
+
 app.listen(3000, () => {
     console.log("Escuchando en: http://localhost:3000");
 })
