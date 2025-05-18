@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JoaquinQFox/pw2-teoria-sqlite/issues"
   },
-  "homepage": "https://github.com/JoaquinQFox/pw2-teoria-sqlite#readme"
+  "homepage": "https://github.com/JoaquinQFox/pw2-teoria-sqlite#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
