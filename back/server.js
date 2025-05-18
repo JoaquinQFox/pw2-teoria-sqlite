@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
+const db = require('./db');
 
 const FRONT_PATH = path.join(__dirname, '..', 'front');
 
@@ -16,7 +17,7 @@ app.get('/actores', (request, response) => {
         if (err) 
             response.status(500).json({ error: err.message });
         else 
-            response.rows.json();
+            response.json(rows);
     });
 });
 

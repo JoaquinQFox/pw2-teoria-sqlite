@@ -4,4 +4,4 @@ const db_path = './imdb.db';
 
 const db = new sqlite3.Database(db_path);
 
-
+module.exports = db;
