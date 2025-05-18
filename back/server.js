@@ -13,7 +13,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/actores', (request, response) => {
-    db.all("select * from actor", [], (err, rows) => {
+    db.all("select * from actor order by Name", [], (err, rows) => {
         if (err) 
             response.status(500).json({ error: err.message });
         else 
